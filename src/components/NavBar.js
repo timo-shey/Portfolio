@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from "../assets/img/OneQ Logo - White Icon.png";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import navIcon1 from "../assets/img/icons8-linkedin-480.png";
+import navIcon2 from "../assets/img/github.png";
+import navIcon3 from "../assets/img/pdf-100.png";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -33,7 +33,7 @@ export const NavBar = () => {
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="/">
+          <Navbar.Brand href="#home">
             <img src={logo} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -73,14 +73,26 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://www.linkedin.com/in/timileyin-adeleke/">
-                  <img src={navIcon1} alt="" />
+                <a
+                  href="https://www.linkedin.com/in/timileyin-adeleke/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={navIcon1} alt="My LinkedIn Profile" />
                 </a>
-                <a href="https://github.com/timo-shey">
-                  <img src={navIcon2} alt="" />
+                <a
+                  href="https://github.com/timo-shey"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={navIcon2} alt="My GitHub Profile" />
                 </a>
-                <a href="https://docs.google.com/document/d/1JEPd0jlzmzyskxs8pbIucr7rz68Q_o5lu3A4TEahVjw/edit?usp=sharing">
-                  <img src={navIcon3} alt="" />
+                <a
+                  href="https://docs.google.com/document/d/1JEPd0jlzmzyskxs8pbIucr7rz68Q_o5lu3A4TEahVjw/edit?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={navIcon3} alt="My Resume" />
                 </a>
               </div>
               <HashLink to="#connect">
